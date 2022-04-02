@@ -1,10 +1,7 @@
-use nannou::{prelude::*};
+use nannou::prelude::*;
 
 fn main() {
-    nannou::app(model)
-        .update(update)
-        .simple_window(view)
-        .run();
+    nannou::app(model).update(update).simple_window(view).run();
 }
 
 struct Model {
@@ -29,10 +26,9 @@ fn update(_app: &App, model: &mut Model, _update: Update) {
     }
 }
 
-fn view(app: &App, model: &Model, frame: Frame){
+fn view(app: &App, model: &Model, frame: Frame) {
     let draw = app.draw();
-    draw.background()
-        .color(BLACK);
+    draw.background().color(BLACK);
     draw.ellipse()
         .color(model.bg_color)
         .w(model.radius)
