@@ -28,15 +28,21 @@ fn view(app: &App, frame: Frame) {
 
     for y in 0..ROWS {
         for x in 0..COLS {
-            let cdraw = gdraw.x_y(x as f32, y as f32).rotate(((x + y) / 10) as f32);
+            let cdraw = gdraw.x_y(x as f32, y as f32);
+
+            let factor = (x as f32 / COLS as f32 - y as f32 / ROWS as f32) / 2.0;
+            let x_offset = factor * random_range(-0.5, 0.5);
+            let y_offset = factor * random_range(-0.5, 0.5);
+            let rotation = factor * random_range(-PI / 4.0, PI / 4.0);
+
             cdraw
                 .rect()
                 .no_fill()
                 .stroke(BLACK)
                 .stroke_weight(LINE_WIDTH)
                 .w_h(1.0, 1.0)
-                .x_y(0.0, 0.0)
-                .rotate(0.0);
+                .x_y(x_offset, y_offset)
+                .rotate(rotation);
         }
     }
 
