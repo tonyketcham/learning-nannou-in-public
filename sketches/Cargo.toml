@@ -1,8 +1,8 @@
 [package]
-name = "sketches"
-version = "0.1.0"
 authors = ["tonyketcham <ketcham.dev@gmail.com>"]
 edition = "2021"
+name = "sketches"
+version = "0.1.0"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
@@ -10,5 +10,9 @@ edition = "2021"
 nannou = "0.18"
 
 [[example]]
-name = "growing-circle"
-path = "growing-circle.rs"
+name = "01-growing-circle"
+path = "01-growing-circle.rs"
+
+[[example]]
+name = "02-schotter"
+path = "02-schotter.rs"

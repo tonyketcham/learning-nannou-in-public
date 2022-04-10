@@ -8,6 +8,6 @@ This is me learning Rust + Nannou to hopefully be able to make good use of the p
 2. clone the repo and `cd` into it
 3. `cargo run --release --example <put a sketch's name here - they're listed in Cargo.toml>`
 
-   > For example: `cargo run --release --example growing-circle`
+   > For example: `cargo run --release --example 01-growing-circle`
 
 4. oooo and ahhhh
